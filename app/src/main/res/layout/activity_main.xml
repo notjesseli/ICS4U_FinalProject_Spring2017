@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,8 +11,57 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.strobertchs.ics4u_finalproject_wukongshowdown.MainActivity">
 
-    <TextView
+    <ImageView
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/sky"
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:cropToPadding="false"
+        android:adjustViewBounds="false" />
+
+    <Button
+        android:text="Help"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:id="@+id/button2"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/banner2"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="Play"
+        android:id="@+id/button"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/banner2"
+        android:textColor="@android:color/background_light"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_height="60dp"
+        android:layout_width="150dp" />
+
+    <Button
+        android:text="Quit"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="39dp"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:background="@drawable/banner2"
+        android:textColor="@android:color/background_light" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        app:srcCompat="@drawable/background"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp" />
+
 </RelativeLayout>
