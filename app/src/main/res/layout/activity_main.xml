@@ -12,56 +12,93 @@
     tools:context="com.strobertchs.ics4u_finalproject_wukongshowdown.MainActivity">
 
     <ImageView
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/sky"
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="false"
         android:cropToPadding="false"
-        android:adjustViewBounds="false" />
+        app:srcCompat="@drawable/sky"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/background"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Help"
+        android:id="@+id/button2"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:id="@+id/button2"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/banner3"
+        android:text="Help"
+        android:textColor="@android:color/background_light"
         android:layout_above="@+id/button3"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/banner2"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/banner3"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Play"
         android:textColor="@android:color/background_light" />
 
     <Button
-        android:text="Play"
-        android:id="@+id/button"
-        android:layout_marginBottom="13dp"
-        android:background="@drawable/banner2"
-        android:textColor="@android:color/background_light"
-        android:fontFamily="sans-serif-condensed"
-        android:layout_above="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_height="60dp"
-        android:layout_width="150dp" />
-
-    <Button
-        android:text="Quit"
+        android:id="@+id/button3"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="39dp"
-        android:id="@+id/button3"
-        android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/button2"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/button2"
-        android:background="@drawable/banner2"
+        android:layout_marginBottom="39dp"
+        android:background="@drawable/banner3"
+        android:text="Quit"
         android:textColor="@android:color/background_light" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/background"
-        android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="41dp" />
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/cloud"
+        android:layout_marginBottom="38dp"
+        android:layout_alignBottom="@+id/imageView5"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        app:srcCompat="@drawable/cloud"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignRight="@+id/imageView6"
+        android:layout_alignEnd="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/cloud"
+        android:layout_alignBottom="@+id/imageView5"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginBottom="13dp" />
 
 </RelativeLayout>
