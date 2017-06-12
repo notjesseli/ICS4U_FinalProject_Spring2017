@@ -17,10 +17,10 @@
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
-        app:srcCompat="@drawable/sky"
-        android:layout_alignParentTop="true" />
+        app:srcCompat="@drawable/sky" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="false"
         app:srcCompat="@drawable/background"
-        android:layout_alignBottom="@+id/button"
+        android:layout_alignBottom="@+id/buttonPlay"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -41,11 +41,11 @@
         android:text="Help"
         android:textColor="@android:color/background_light"
         android:layout_above="@+id/button3"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_alignLeft="@+id/buttonPlay"
+        android:layout_alignStart="@+id/buttonPlay" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonPlay"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_above="@+id/button2"
@@ -53,6 +53,7 @@
         android:layout_marginBottom="13dp"
         android:background="@drawable/banner3"
         android:fontFamily="sans-serif-condensed"
+        android:onClick="buttonPlay"
         android:text="Play"
         android:textColor="@android:color/background_light" />
 
@@ -97,8 +98,8 @@
         android:layout_height="60dp"
         app:srcCompat="@drawable/cloud"
         android:layout_alignBottom="@+id/imageView5"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button"
+        android:layout_toRightOf="@+id/buttonPlay"
+        android:layout_toEndOf="@+id/buttonPlay"
         android:layout_marginBottom="13dp" />
 
 </RelativeLayout>
