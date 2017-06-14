@@ -11,7 +11,8 @@ public abstract class AnimatedSprite extends Sprite {
     private boolean movingRight;    // RIGHT Boolean
     private boolean movingUp;       // UP Boolean
     private boolean movingDown;     // DOWN Boolean
-    private int up_amount;          // How much the projectile moves upward
+    private int horizontal_amount;  // How much the Sprite moves along the Horizontal Axis
+    private int up_amount;          // How much the ball moves downward
 
     /**
      * Constructor - just calls the parent constructor
@@ -70,6 +71,23 @@ public abstract class AnimatedSprite extends Sprite {
 
 
     /**
+     * Current value of horizontal movement (number of pixels to move horizontally)
+     * @return int of current horizontal movement amount
+     */
+    public int getHorizontal_amount() {
+        return horizontal_amount;
+    }
+
+    /**
+     * set horizontal movement
+     * @param horizontal_amount int number of pixels to move horizontally
+     */
+    public void setHorizontal_amount(int horizontal_amount) {
+        this.horizontal_amount = horizontal_amount;
+    }
+
+
+    /**
      * getter for up_amount, the number of pixels moving upwards
      * @return
      */
@@ -85,7 +103,6 @@ public abstract class AnimatedSprite extends Sprite {
     public void setUp_amount(int up_amount) {
         this.up_amount = up_amount;
     }
-
 
     /**
      * set the intended direction to the right
