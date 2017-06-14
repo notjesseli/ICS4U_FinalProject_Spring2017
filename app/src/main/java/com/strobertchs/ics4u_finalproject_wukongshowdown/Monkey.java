@@ -1,18 +1,22 @@
-package com.strobertchs.ics4u_finalproject_wukongshowdown;
-
+import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+
+import com.strobertchs.ics4u_finalproject_wukongshowdown.AnimatedSprite;
+import com.strobertchs.ics4u_finalproject_wukongshowdown.R;
 
 import java.util.ArrayList;
 
 /**
  * Created by Owen Chen, Jesse Li, and Andrew Lin on 2017-06-12.
  */
+public class Monkey extends AnimatedSprite{
 
-public class Monkey extends AnimatedSprite {
     protected Bitmap bitmapRacket;
     protected int frameNumber;
     protected int frameHeight;
@@ -38,18 +42,16 @@ public class Monkey extends AnimatedSprite {
         setWidth(screen_width / 6);
         setHeight(15);
 
-        bitmapRacket = BitmapFactory.decodeResource(context.getResources(), R.drawable.moon);
+        bitmapRacket = BitmapFactory.decodeResource(context.getResources(), R.drawable.monkey);
 
         frameHeight = bitmapRacket.getHeight();
         frameWidth = bitmapRacket.getWidth();
 
         racketImage = new ArrayList<>();
 
-        racketImage.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.moon));
+        racketImage.add(BitmapFactory.decodeResource(context.getResources(), R.drawable.monkey));
 
         numFrames = racketImage.size();
-
-        frameNumber++; //advance the frame count
     }
 
     /**
