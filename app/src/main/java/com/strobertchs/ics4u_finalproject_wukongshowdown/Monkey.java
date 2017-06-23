@@ -7,19 +7,19 @@ package com.strobertchs.ics4u_finalproject_wukongshowdown;
 public class Monkey{
 
     /*
-    * Initializing variable to represent hearts.
+    * Initializing variable to represent hearts of monkey objects.
      */
 
     private int hearts;
 
     /*
-    * Initializing variable to represent name.
+    * Initializing variable to represent name of monkey objects.
      */
 
     private String name;
 
     /*
-    * Initializing variable to represent strength.
+    * Initializing variable to represent strength of monkey objects.
      */
 
     private int strength;
@@ -32,10 +32,10 @@ public class Monkey{
 
     /*
     * Constructor method used to initialize a monkey object.
-    @param mHearts - Parameter used to set the initial amount of hearts for the monkey object.
-    @param mName - Parameter used to set the initial name of the monkey object.
-    @param mStrength - Parameter used to set the initial amount of strength for the monkey object.
-    @param mScore - Parameter used to set hte initial score for the monkey object.
+    * @param mHearts - Parameter used to set the initial amount of hearts for the monkey object.
+    * @param mName - Parameter used to set the initial name of the monkey object.
+    * @param mStrength - Parameter used to set the initial amount of strength for the monkey object.
+    * @param mScore - Parameter used to set hte initial score for the monkey object.
      */
 
     public Monkey(int mHearts, String mName,int mStrength, int mScore)
@@ -47,8 +47,8 @@ public class Monkey{
     }
 
     /*
-    * Method to return hearts.
-    * @return - Returns current amount of hearts.
+    * Getter method used to return hearts.
+    * @return - Returns current amount of hearts in the monkey object.
     */
 
     public int getHearts(){
@@ -56,16 +56,16 @@ public class Monkey{
     }
 
     /*
-    * Method to return name.
-    @return - Returns current name.
+    * Getter method used to return name.
+    * @return - Returns current name in the monkey object.
      */
     public String getName(){
         return name;
     }
 
     /*
-    * Method to return strength.
-    @return - Returns current amount of strength.
+    * Getter method used to return strength.
+    * @return - Returns current amount of strength in the monkey object.
      */
 
     public int getStrength(){
@@ -73,8 +73,8 @@ public class Monkey{
     }
 
     /*
-    * Method to return score.
-    @return - Returns current score.
+    * Getter method used to return score.
+    * @return - Returns current score in the monkey object.
      */
 
     public int getScore(){
@@ -83,7 +83,7 @@ public class Monkey{
 
     /*
     * Setter method to change the number of starting hearts.
-    @param playerHearts - Parameter used to set the amount of hearts when calling the method.
+    * @param playerHearts - Parameter used to set the amount of hearts when calling the method.
      */
 
     public void setHearts(int playerHearts){
@@ -92,7 +92,7 @@ public class Monkey{
 
     /*
     * Setter method used to change starting strength.
-    @param playerStrength - Parameter used to set the amount of strength when calling the method.
+    * @param playerStrength - Parameter used to set the amount of strength when calling the method.
      */
     public void setStrength(int playerStrength){
         strength = playerStrength;
@@ -100,7 +100,7 @@ public class Monkey{
 
     /*
     * Setter method used to change starting score.
-    @param playerScore - Parameter used to set the amount of score when calling the method.
+    * @param playerScore - Parameter used to set the amount of score when calling the method.
      */
 
     public void setScore(int playerScore){
