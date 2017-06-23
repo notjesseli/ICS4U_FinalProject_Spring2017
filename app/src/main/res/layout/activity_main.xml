@@ -32,22 +32,23 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonHelp"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="13dp"
-        android:background="@drawable/banner3"
-        android:text="Help"
-        android:textColor="@android:color/background_light"
         android:layout_above="@+id/button3"
         android:layout_alignLeft="@+id/buttonPlay"
-        android:layout_alignStart="@+id/buttonPlay" />
+        android:layout_alignStart="@+id/buttonPlay"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/banner3"
+        android:onClick="ruleClick"
+        android:text="Help"
+        android:textColor="@android:color/background_light" />
 
     <Button
         android:id="@+id/buttonPlay"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/buttonHelp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="13dp"
         android:background="@drawable/banner3"
@@ -60,11 +61,12 @@
         android:id="@+id/button3"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_alignLeft="@+id/button2"
+        android:layout_alignLeft="@+id/buttonHelp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/button2"
+        android:layout_alignStart="@+id/buttonHelp"
         android:layout_marginBottom="39dp"
         android:background="@drawable/banner3"
+        android:onClick="quitClick"
         android:text="Quit"
         android:textColor="@android:color/background_light" />
 
