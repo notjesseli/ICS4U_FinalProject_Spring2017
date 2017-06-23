@@ -6,38 +6,64 @@ package com.strobertchs.ics4u_finalproject_wukongshowdown;
 
 public class Demon {
 
-    private int hearts;
-    private int strength;
-    private int score;
+    /*
+    * Initializing variable to represent hearts of demon objects.
+     */
 
-    public Demon(int dhearts, int dstrength, int dscore)
+    private int hearts;
+
+    /*
+    * Initializing variable to represent strength of demon objects.
+     */
+
+    private int strength;
+
+    /*
+    * Constructor method used to initialize new demon objects.
+    * @param demonHearts - Parameter used to set the initial amount of hearts in the demon object.
+    * @param demonStrength - Parameter used to set the initial amount of strength in the demon object.
+     */
+
+    public Demon(int dHearts, int dStrength)
     {
-        hearts = dhearts;
-        strength = dstrength;
-        score = dscore;
+        hearts = dHearts;
+        strength = dStrength;
     }
+
+    /*
+    * Getter method used to return hearts.
+    * @return - Returns the current amount of hearts in the demon object.
+     */
 
     public int getHearts(){
         return hearts;
     }
 
+    /*
+    * Getter method used to return strength.
+    * @return - Returns the current amount of strength in the demon object.
+     */
+
     public int getStrength(){
         return strength;
     }
 
-    public int getScore(){
-        return score;
+    /*
+    * Setter method used to change the amount of hearts.
+    * @param demonHearts - Parameter used to set the amount of hearts.
+     */
+
+    public void setHearts(int demonHearts){
+        hearts = demonHearts;
     }
 
-    public void setHearts(int h){
-        hearts = h;
+    /*
+    * Setter method used to change the amount of strength.
+    * @param demonStrength - Parameter used to set the amount of strength.
+     */
+
+    public void setStrength(int demonStrength){
+        strength = demonStrength;
     }
 
-    public void setStrength(int s){
-        strength = s;
-    }
-
-    public void setScore(int sc){
-        score = sc;
-    }
 }
