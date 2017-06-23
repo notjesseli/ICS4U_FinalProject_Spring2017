@@ -101,4 +101,14 @@
         android:layout_toEndOf="@+id/buttonPlay"
         android:layout_marginBottom="13dp" />
 
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/wukongsunnyshowdown"
+        android:layout_marginBottom="117dp"
+        android:layout_above="@+id/buttonPlay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
