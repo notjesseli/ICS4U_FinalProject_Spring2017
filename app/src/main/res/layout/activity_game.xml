@@ -24,41 +24,152 @@
         android:id="@+id/monkey"
         android:layout_width="147dp"
         android:layout_height="166dp"
-        app:srcCompat="@drawable/monkey"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="194dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/monkey" />
 
     <Button
         android:id="@+id/demonup"
         android:layout_width="110dp"
         android:layout_height="123dp"
+        android:background="@drawable/weakdemon"
+        android:onClick="demon1"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/monkey"
+        android:layout_marginRight="8dp"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.498" />
+
+    <Button
+        android:id="@+id/pdemonup"
+        android:layout_width="110dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/demon"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="71dp" />
+        android:onClick="pdemon1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/monkey"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/demondown"
         android:layout_width="110dp"
         android:layout_height="123dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/weakdemon"
+        android:onClick="demon2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monkey"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/pdemondown"
+        android:layout_width="110dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/demon"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="360dp" />
+        android:onClick="pdemon2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monkey"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/demonright"
         android:layout_width="110dp"
         android:layout_height="123dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/weakdemon"
+        android:onClick="demon4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/monkey"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pdemonright"
+        android:layout_width="110dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/demon"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="221dp" />
+        android:onClick="pdemon4"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/monkey"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/demonleft"
         android:layout_width="110dp"
         android:layout_height="123dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/weakdemon"
+        android:onClick="demon3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/monkey"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pdemonleft"
+        android:layout_width="110dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/demon"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="221dp" />
+        android:onClick="pdemon3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/monkey"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
