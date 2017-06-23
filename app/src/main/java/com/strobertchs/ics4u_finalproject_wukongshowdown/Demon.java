@@ -1,30 +1,24 @@
 package com.strobertchs.ics4u_finalproject_wukongshowdown;
 
 /**
- * Created by Owen Chen, Jesse Li, and Andrew Lin on 2017-06-12.
+ * Created by Jesse Li on 6/22/2017.
  */
 
-public class Monkey{
+public class Demon {
 
     private int hearts;
-    private String name;
     private int strength;
     private int score;
 
-    public Monkey(int mhearts, String mname,int mstrength, int mscore)
+    public Demon(int dhearts, int dstrength, int dscore)
     {
-        hearts = mhearts;
-        name = mname;
-        strength = mstrength;
-        score = mscore;
+        hearts = dhearts;
+        strength = dstrength;
+        score = dscore;
     }
 
     public int getHearts(){
         return hearts;
-    }
-
-    public String getName(){
-        return name;
     }
 
     public int getStrength(){
@@ -46,5 +40,4 @@ public class Monkey{
     public void setScore(int sc){
         score = sc;
     }
-
 }

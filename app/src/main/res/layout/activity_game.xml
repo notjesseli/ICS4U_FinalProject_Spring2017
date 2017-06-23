@@ -19,4 +19,45 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/city" />
+
+    <ImageView
+        android:id="@+id/monkey"
+        android:layout_width="147dp"
+        android:layout_height="166dp"
+        app:srcCompat="@drawable/monkey"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <Button
+        android:id="@+id/demonup"
+        android:layout_width="110dp"
+        android:layout_height="123dp"
+        android:background="@drawable/demon"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <Button
+        android:id="@+id/demondown"
+        android:layout_width="110dp"
+        android:layout_height="123dp"
+        android:background="@drawable/demon"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="360dp" />
+
+    <Button
+        android:id="@+id/demonright"
+        android:layout_width="110dp"
+        android:layout_height="123dp"
+        android:background="@drawable/demon"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <Button
+        android:id="@+id/demonleft"
+        android:layout_width="110dp"
+        android:layout_height="123dp"
+        android:background="@drawable/demon"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="221dp" />
+
 </android.support.constraint.ConstraintLayout>
