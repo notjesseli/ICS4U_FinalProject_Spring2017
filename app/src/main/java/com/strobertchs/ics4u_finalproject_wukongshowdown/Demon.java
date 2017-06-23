@@ -1,7 +1,7 @@
 package com.strobertchs.ics4u_finalproject_wukongshowdown;
 
 /**
- * Created by Jesse Li on 6/22/2017.
+ * Created by Jesse Li, Owen Chen, and Andrew Lin on 6/22/2017.
  */
 
 public class Demon {
