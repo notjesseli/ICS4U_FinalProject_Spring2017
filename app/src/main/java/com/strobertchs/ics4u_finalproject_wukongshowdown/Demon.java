@@ -44,9 +44,7 @@ public class Demon {
     * @return - Returns the current amount of strength in the demon object.
      */
 
-    public int getStrength(){
-        return strength;
-    }
+    public int getStrength(){return strength; }
 
     /*
     * Setter method used to change the amount of hearts.

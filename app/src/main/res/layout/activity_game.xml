@@ -35,43 +35,43 @@
         app:srcCompat="@drawable/monkey" />
 
     <Button
-        android:id="@+id/demonup"
+        android:id="@+id/Lucifier"
         android:layout_width="110dp"
         android:layout_height="123dp"
-        android:background="@drawable/weakdemon"
-        android:onClick="demon1"
-        android:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/monkey"
-        android:layout_marginRight="8dp"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/weakdemon"
+        android:onClick="lucifierclick"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/monkey"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.498" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/pdemonup"
+        android:id="@+id/Azazel"
         android:layout_width="110dp"
         android:layout_height="123dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="0dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/demon"
-        android:onClick="pdemon1"
+        android:onClick="azazelclick"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintBottom_toTopOf="@+id/Amaimon"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/Lucifier"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.861" />
 
     <Button
-        android:id="@+id/demondown"
+        android:id="@+id/Iblis"
         android:layout_width="110dp"
         android:layout_height="123dp"
         android:layout_marginBottom="8dp"
@@ -79,7 +79,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="0dp"
         android:background="@drawable/weakdemon"
-        android:onClick="demon2"
+        android:onClick="iblisclick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -88,25 +88,25 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/pdemondown"
+        android:id="@+id/Mephisto"
         android:layout_width="110dp"
         android:layout_height="123dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/demon"
-        android:onClick="pdemon2"
+        android:onClick="mephistoclick"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintLeft_toRightOf="@+id/Iblis"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintTop_toBottomOf="@+id/Egyn"
+        app:layout_constraintVertical_bias="0.128" />
 
     <Button
-        android:id="@+id/demonright"
+        android:id="@+id/Egyn"
         android:layout_width="110dp"
         android:layout_height="123dp"
         android:layout_marginBottom="8dp"
@@ -114,7 +114,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/weakdemon"
-        android:onClick="demon4"
+        android:onClick="egynclick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/monkey"
@@ -122,25 +122,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/pdemonright"
+        android:id="@+id/Beelzebub"
         android:layout_width="110dp"
         android:layout_height="123dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/demon"
-        android:onClick="pdemon4"
+        android:onClick="beelzebubclick"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Egyn"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintLeft_toRightOf="@+id/Lucifier"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.861" />
 
     <Button
-        android:id="@+id/demonleft"
+        android:id="@+id/Amaimon"
         android:layout_width="110dp"
         android:layout_height="123dp"
         android:layout_marginBottom="8dp"
@@ -148,7 +148,7 @@
         android:layout_marginRight="0dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/weakdemon"
-        android:onClick="demon3"
+        android:onClick="amaimonclick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -156,22 +156,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/pdemonleft"
+        android:id="@+id/Satan"
         android:layout_width="110dp"
         android:layout_height="123dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/demon"
-        android:onClick="pdemon3"
+        android:onClick="satanclick"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintRight_toLeftOf="@+id/Iblis"
+        app:layout_constraintTop_toBottomOf="@+id/Amaimon"
+        app:layout_constraintVertical_bias="0.128" />
 
     <TextView
         android:id="@+id/textView"
