@@ -8,6 +8,7 @@ import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.util.Random;
@@ -15,7 +16,7 @@ import java.util.Random;
 public class GameActivity extends AppCompatActivity {
 
     private int score = 0;
-
+    TextView textObjectView;
 
     //Variable for punch sound
     MediaPlayer punch_sound;
@@ -26,6 +27,8 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+
+        textObjectView = (TextView) findViewById(R.id.textView);
     }
 
     Demon Lucifer = new Demon(1, 1);
@@ -65,7 +68,7 @@ public class GameActivity extends AppCompatActivity {
             } else if (rannum == 4) {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
-
+            textObjectView.setText("Score: " + score);
             //Punch Sound
             punch_sound.start();
         }
@@ -95,6 +98,7 @@ public class GameActivity extends AppCompatActivity {
             } else if (rannum == 4) {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
+            textObjectView.setText("Score: " + score);
         }
 
         //Punch Sound
@@ -125,6 +129,7 @@ public class GameActivity extends AppCompatActivity {
             } else if (rannum == 4) {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
+            textObjectView.setText("Score: " + score);
         }
 
         //Punch Sound
@@ -155,6 +160,7 @@ public class GameActivity extends AppCompatActivity {
                 satanclick.setVisibility(View.VISIBLE);
                 Satan.setHearts(2);
             }
+            textObjectView.setText("Score: " + score);
         }
 
         //Punch Sound
@@ -177,6 +183,7 @@ public class GameActivity extends AppCompatActivity {
             iblisclick.setVisibility(View.VISIBLE);
             egynclick.setVisibility(View.VISIBLE);
             amaimonclick.setVisibility(View.VISIBLE);
+            textObjectView.setText("Score: " + score);
         }
 
 
@@ -201,6 +208,7 @@ public class GameActivity extends AppCompatActivity {
             iblisclick.setVisibility(View.VISIBLE);
             egynclick.setVisibility(View.VISIBLE);
             amaimonclick.setVisibility(View.VISIBLE);
+            textObjectView.setText("Score: " + score);
         }
 
         //Punch Sound
@@ -222,6 +230,7 @@ public class GameActivity extends AppCompatActivity {
             iblisclick.setVisibility(View.VISIBLE);
             egynclick.setVisibility(View.VISIBLE);
             amaimonclick.setVisibility(View.VISIBLE);
+            textObjectView.setText("Score: " + score);
             }
 
 
@@ -245,6 +254,7 @@ public class GameActivity extends AppCompatActivity {
             iblisclick.setVisibility(View.VISIBLE);
             egynclick.setVisibility(View.VISIBLE);
             amaimonclick.setVisibility(View.VISIBLE);
+            textObjectView.setText("Score: " + score);
             }
 
 
