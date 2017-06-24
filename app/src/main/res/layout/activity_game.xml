@@ -35,7 +35,7 @@
         app:srcCompat="@drawable/monkey" />
 
     <Button
-        android:id="@+id/Lucifier"
+        android:id="@+id/Lucifer"
         android:layout_width="110dp"
         android:layout_height="123dp"
         android:layout_marginBottom="0dp"
@@ -43,7 +43,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/weakdemon"
-        android:onClick="lucifierclick"
+        android:onClick="luciferclick"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/monkey"
         app:layout_constraintHorizontal_bias="0.498"
@@ -66,7 +66,7 @@
         app:layout_constraintBottom_toTopOf="@+id/Amaimon"
         app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/Lucifier"
+        app:layout_constraintRight_toLeftOf="@+id/Lucifer"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.861" />
 
@@ -134,7 +134,7 @@
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/Egyn"
         app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintLeft_toRightOf="@+id/Lucifier"
+        app:layout_constraintLeft_toRightOf="@+id/Lucifer"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.861" />

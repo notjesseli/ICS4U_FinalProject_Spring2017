@@ -1,12 +1,21 @@
 package com.strobertchs.ics4u_finalproject_wukongshowdown;
 
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import java.io.IOException;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
+
+    //Variable for punch sound
+    MediaPlayer punch_sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +24,7 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
-    Demon Lucifier = new Demon(1, 1);
+    Demon Lucifer = new Demon(1, 1);
     Demon Iblis = new Demon(1,1);
     Demon Egyn = new Demon(1,1);
     Demon Amaimon = new Demon(1,1);
@@ -24,16 +33,15 @@ public class GameActivity extends AppCompatActivity {
     Demon Beelzebub = new Demon(2,1);
     Demon Satan = new Demon(2,1);
 
-
     public void lucifierclick(View v) {
         View azazelclick = findViewById(R.id.Azazel);
-        View luciferclick = findViewById(R.id.Lucifier);
+        View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
-        Lucifier.setHearts(0);
+        Lucifer.setHearts(0);
 
-        if(Lucifier.getHearts() == 0) {
+        if(Lucifer.getHearts() == 0) {
             luciferclick.setVisibility(View.GONE);
 
             Random num = new Random();
@@ -49,12 +57,16 @@ public class GameActivity extends AppCompatActivity {
             } else if (rannum == 4) {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
+
+            //Punch Sound
+            punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+            punch_sound.start();
         }
     }
 
     public void iblisclick (View v) {
         View mephistoclick = findViewById(R.id.Mephisto);
-        View luciferclick = findViewById(R.id.Lucifier);
+        View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
@@ -77,11 +89,15 @@ public class GameActivity extends AppCompatActivity {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
         }
+
+        //Punch Sound
+        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+        punch_sound.start();
     }
 
     public void egynclick(View v) {
         View beelzebubclick = findViewById(R.id.Beelzebub);
-        View luciferclick = findViewById(R.id.Lucifier);
+        View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
@@ -104,11 +120,15 @@ public class GameActivity extends AppCompatActivity {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
         }
+
+        //Punch Sound
+        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+        punch_sound.start();
     }
 
     public void amaimonclick(View v) {
         View satanclick = findViewById(R.id.Satan);
-        View luciferclick = findViewById(R.id.Lucifier);
+        View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
@@ -131,11 +151,15 @@ public class GameActivity extends AppCompatActivity {
                 Satan.setHearts(2);
             }
         }
+
+        //Punch Sound
+        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+        punch_sound.start();
     }
 
     public void azazelclick(View v) {
         View azazelclick = findViewById(R.id.Azazel);
-        View luciferclick = findViewById(R.id.Lucifier);
+        View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
@@ -156,11 +180,14 @@ public class GameActivity extends AppCompatActivity {
             }
         }
 
+        //Punch Sound
+        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+        punch_sound.start();
     }
 
     public void mephistoclick(View v) {
         View mephistoclick = findViewById(R.id.Mephisto);
-        View luciferclick = findViewById(R.id.Lucifier);
+        View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
@@ -180,11 +207,15 @@ public class GameActivity extends AppCompatActivity {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
         }
+
+        //Punch Sound
+        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+        punch_sound.start();
     }
 
     public void beelzebubclick(View v) {
         View beelzebubclick = findViewById(R.id.Beelzebub);
-        View luciferclick = findViewById(R.id.Lucifier);
+        View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
@@ -204,11 +235,15 @@ public class GameActivity extends AppCompatActivity {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
         }
+
+        //Punch Sound
+        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+        punch_sound.start();
     }
 
     public void satanclick(View v) {
         View satanclick = findViewById(R.id.Satan);
-        View luciferclick = findViewById(R.id.Lucifier);
+        View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
@@ -228,7 +263,10 @@ public class GameActivity extends AppCompatActivity {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
         }
-    }
 
+        //Punch Sound
+        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
+        punch_sound.start();
+    }
 
 }
