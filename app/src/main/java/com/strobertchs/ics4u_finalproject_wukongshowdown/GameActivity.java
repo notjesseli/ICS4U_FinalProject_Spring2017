@@ -7,7 +7,7 @@ import android.view.View;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
-
+    private int score = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,8 @@ public class GameActivity extends AppCompatActivity {
     Demon Mephisto = new Demon(2, 1);
     Demon Beelzebub = new Demon(2,1);
     Demon Satan = new Demon(2,1);
+    Monkey WuKong = new Monkey(3, "WUKONG", 2, score);
+
 
 
     public void lucifierclick(View v) {
@@ -31,11 +33,11 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
-        Lucifier.setHearts(0);
+        Lucifier.setHearts(Lucifier.getHearts() - WuKong.getStrength());
 
-        if(Lucifier.getHearts() == 0) {
+        if(Lucifier.getHearts() <= 0) {
             luciferclick.setVisibility(View.GONE);
-
+            score += 50;
             Random num = new Random();
             int rannum = num.nextInt(4) + 1;
 
@@ -58,11 +60,11 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
-        Iblis.setHearts(0);
+        Iblis.setHearts(Iblis.getHearts() - WuKong.getStrength());
 
-        if(Iblis.getHearts() == 0) {
+        if(Iblis.getHearts() <= 0) {
             iblisclick.setVisibility(View.GONE);
-
+            score += 50;
             Random num = new Random();
             int rannum = num.nextInt(4) + 1;
 
@@ -85,11 +87,11 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
-        Egyn.setHearts(0);
+        Egyn.setHearts(Egyn.getHearts() - WuKong.getStrength());
 
-        if(Egyn.getHearts() == 0) {
+        if(Egyn.getHearts() <= 0) {
             egynclick.setVisibility(View.GONE);
-
+            score += 50;
             Random num = new Random();
             int rannum = num.nextInt(4) + 1;
 
@@ -112,11 +114,11 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
-        Amaimon.setHearts(0);
+        Amaimon.setHearts(Amaimon.getHearts() - WuKong.getStrength());
 
-        if(Amaimon.getHearts() == 0) {
+        if(Amaimon.getHearts() <= 0) {
             amaimonclick.setVisibility(View.GONE);
-
+            score += 50;
             Random num = new Random();
             int rannum = num.nextInt(4) + 1;
 
@@ -140,21 +142,17 @@ public class GameActivity extends AppCompatActivity {
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
 
-        if(Azazel.getHearts() == 2){
-            Azazel.setHearts(1);
-        }
-        else {
-            Azazel.setHearts(0);
+        Azazel.setHearts(Azazel.getHearts() - WuKong.getStrength());
 
-            if(Azazel.getHearts() == 0){
-                azazelclick.setVisibility(View.GONE);
-
-                luciferclick.setVisibility(View.VISIBLE);
-                iblisclick.setVisibility(View.VISIBLE);
-                egynclick.setVisibility(View.VISIBLE);
-                amaimonclick.setVisibility(View.VISIBLE);
-            }
+        if(Azazel.getHearts() <= 0){
+            azazelclick.setVisibility(View.GONE);
+            score += 100;
+            luciferclick.setVisibility(View.VISIBLE);
+            iblisclick.setVisibility(View.VISIBLE);
+            egynclick.setVisibility(View.VISIBLE);
+            amaimonclick.setVisibility(View.VISIBLE);
         }
+
 
     }
 
@@ -165,20 +163,15 @@ public class GameActivity extends AppCompatActivity {
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
 
-        if(Mephisto.getHearts() == 2){
-            Mephisto.setHearts(1);
-        }
-        else {
-            Mephisto.setHearts(0);
+        Mephisto.setHearts(Mephisto.getHearts() - WuKong.getStrength());
 
-            if(Mephisto.getHearts() == 0){
-                mephistoclick.setVisibility(View.GONE);
-
-                luciferclick.setVisibility(View.VISIBLE);
-                iblisclick.setVisibility(View.VISIBLE);
-                egynclick.setVisibility(View.VISIBLE);
-                amaimonclick.setVisibility(View.VISIBLE);
-            }
+        if(Mephisto.getHearts() <= 0){
+            mephistoclick.setVisibility(View.GONE);
+            score += 100;
+            luciferclick.setVisibility(View.VISIBLE);
+            iblisclick.setVisibility(View.VISIBLE);
+            egynclick.setVisibility(View.VISIBLE);
+            amaimonclick.setVisibility(View.VISIBLE);
         }
     }
 
@@ -189,21 +182,16 @@ public class GameActivity extends AppCompatActivity {
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
 
-        if(Beelzebub.getHearts() == 2){
-            Beelzebub.setHearts(1);
-        }
-        else {
-            Beelzebub.setHearts(0);
-
-            if(Beelzebub.getHearts() == 0){
-                beelzebubclick.setVisibility(View.GONE);
-
-                luciferclick.setVisibility(View.VISIBLE);
-                iblisclick.setVisibility(View.VISIBLE);
-                egynclick.setVisibility(View.VISIBLE);
-                amaimonclick.setVisibility(View.VISIBLE);
+        Beelzebub.setHearts(Beelzebub.getHearts() - WuKong.getStrength());
+        if(Beelzebub.getHearts() <= 0){
+            beelzebubclick.setVisibility(View.GONE);
+            score += 100;
+            luciferclick.setVisibility(View.VISIBLE);
+            iblisclick.setVisibility(View.VISIBLE);
+            egynclick.setVisibility(View.VISIBLE);
+            amaimonclick.setVisibility(View.VISIBLE);
             }
-        }
+
     }
 
     public void satanclick(View v) {
@@ -213,22 +201,15 @@ public class GameActivity extends AppCompatActivity {
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
 
-        if(Satan.getHearts() == 2){
-            Satan.setHearts(1);
-        }
-        else {
-            Satan.setHearts(0);
-
-            if(Satan.getHearts() == 0){
-                satanclick.setVisibility(View.GONE);
-
-                luciferclick.setVisibility(View.VISIBLE);
-                iblisclick.setVisibility(View.VISIBLE);
-                egynclick.setVisibility(View.VISIBLE);
-                amaimonclick.setVisibility(View.VISIBLE);
+        Satan.setHearts(Satan.getHearts() - WuKong.getStrength());
+        if(Satan.getHearts() <= 0){
+            satanclick.setVisibility(View.GONE);
+            score += 100;
+            luciferclick.setVisibility(View.VISIBLE);
+            iblisclick.setVisibility(View.VISIBLE);
+            egynclick.setVisibility(View.VISIBLE);
+            amaimonclick.setVisibility(View.VISIBLE);
             }
         }
-    }
-
 
 }
