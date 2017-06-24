@@ -25,7 +25,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
+        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
     }
 
     Demon Lucifer = new Demon(1, 1);
@@ -67,7 +67,6 @@ public class GameActivity extends AppCompatActivity {
             }
 
             //Punch Sound
-            punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
             punch_sound.start();
         }
     }
@@ -99,7 +98,6 @@ public class GameActivity extends AppCompatActivity {
         }
 
         //Punch Sound
-        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
         punch_sound.start();
     }
 
@@ -130,7 +128,6 @@ public class GameActivity extends AppCompatActivity {
         }
 
         //Punch Sound
-        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
         punch_sound.start();
     }
 
@@ -161,7 +158,6 @@ public class GameActivity extends AppCompatActivity {
         }
 
         //Punch Sound
-        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
         punch_sound.start();
     }
 
@@ -185,7 +181,6 @@ public class GameActivity extends AppCompatActivity {
 
 
         //Punch Sound
-        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
         punch_sound.start();
 
     }
@@ -209,7 +204,6 @@ public class GameActivity extends AppCompatActivity {
         }
 
         //Punch Sound
-        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
         punch_sound.start();
     }
 
@@ -233,7 +227,6 @@ public class GameActivity extends AppCompatActivity {
 
 
         //Punch Sound
-        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
         punch_sound.start();
     }
 
@@ -256,7 +249,6 @@ public class GameActivity extends AppCompatActivity {
 
 
         //Punch Sound
-        punch_sound = MediaPlayer.create(GameActivity.this, R.raw.punch);
         punch_sound.start();
     }
 
