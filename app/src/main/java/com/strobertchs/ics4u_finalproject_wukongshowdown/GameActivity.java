@@ -1,5 +1,6 @@
 package com.strobertchs.ics4u_finalproject_wukongshowdown;
 
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
@@ -7,14 +8,15 @@ import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
-
     private int score = 0;
     TextView textObjectView;
 
@@ -42,12 +44,16 @@ public class GameActivity extends AppCompatActivity {
     Monkey WuKong = new Monkey(3, "WUKONG", 1, score);
 
 
+
+
+
     public void luciferclick(View v) {
         View azazelclick = findViewById(R.id.Azazel);
         View luciferclick = findViewById(R.id.Lucifer);
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
+        View nextClick = findViewById(R.id.Next);
 
         Lucifer.setHearts(Lucifer.getHearts() - WuKong.getStrength());
 
@@ -71,6 +77,9 @@ public class GameActivity extends AppCompatActivity {
             textObjectView.setText("Score: " + score);
             //Punch Sound
             punch_sound.start();
+            if (score >= 1000) {
+                nextClick.setVisibility(View.VISIBLE);
+            }
         }
     }
 
@@ -80,6 +89,7 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
+        View nextClick = findViewById(R.id.Next);
         Iblis.setHearts(Iblis.getHearts() - WuKong.getStrength());
 
         if(Iblis.getHearts() <= 0) {
@@ -99,6 +109,9 @@ public class GameActivity extends AppCompatActivity {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
             textObjectView.setText("Score: " + score);
+            if (score >= 1000) {
+                nextClick.setVisibility(View.VISIBLE);
+            }
         }
 
         //Punch Sound
@@ -111,6 +124,7 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
+        View nextClick = findViewById(R.id.Next);
         Egyn.setHearts(Egyn.getHearts() - WuKong.getStrength());
 
         if(Egyn.getHearts() <= 0) {
@@ -130,6 +144,9 @@ public class GameActivity extends AppCompatActivity {
                 amaimonclick.setVisibility(View.VISIBLE);
             }
             textObjectView.setText("Score: " + score);
+            if (score >= 1000) {
+                nextClick.setVisibility(View.VISIBLE);
+            }
         }
 
         //Punch Sound
@@ -142,6 +159,7 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
+        View nextClick = findViewById(R.id.Next);
         Amaimon.setHearts(Amaimon.getHearts() - WuKong.getStrength());
 
         if(Amaimon.getHearts() <= 0) {
@@ -161,6 +179,9 @@ public class GameActivity extends AppCompatActivity {
                 Satan.setHearts(2);
             }
             textObjectView.setText("Score: " + score);
+            if (score >= 1000) {
+                nextClick.setVisibility(View.VISIBLE);
+            }
         }
 
         //Punch Sound
@@ -173,6 +194,7 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
+        View nextClick = findViewById(R.id.Next);
 
         Azazel.setHearts(Azazel.getHearts() - WuKong.getStrength());
 
@@ -184,6 +206,10 @@ public class GameActivity extends AppCompatActivity {
             egynclick.setVisibility(View.VISIBLE);
             amaimonclick.setVisibility(View.VISIBLE);
             textObjectView.setText("Score: " + score);
+            if (score >= 1000) {
+                nextClick.setVisibility(View.VISIBLE);
+            }
+
         }
 
 
@@ -198,6 +224,7 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
+        View nextClick = findViewById(R.id.Next);
 
         Mephisto.setHearts(Mephisto.getHearts() - WuKong.getStrength());
 
@@ -209,6 +236,10 @@ public class GameActivity extends AppCompatActivity {
             egynclick.setVisibility(View.VISIBLE);
             amaimonclick.setVisibility(View.VISIBLE);
             textObjectView.setText("Score: " + score);
+            if (score >= 1000) {
+                nextClick.setVisibility(View.VISIBLE);
+            }
+
         }
 
         //Punch Sound
@@ -221,6 +252,7 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
+        View nextClick = findViewById(R.id.Next);
 
         Beelzebub.setHearts(Beelzebub.getHearts() - WuKong.getStrength());
         if(Beelzebub.getHearts() <= 0){
@@ -231,6 +263,9 @@ public class GameActivity extends AppCompatActivity {
             egynclick.setVisibility(View.VISIBLE);
             amaimonclick.setVisibility(View.VISIBLE);
             textObjectView.setText("Score: " + score);
+            if (score >= 1000) {
+                nextClick.setVisibility(View.VISIBLE);
+            }
             }
 
 
@@ -245,6 +280,7 @@ public class GameActivity extends AppCompatActivity {
         View iblisclick = findViewById(R.id.Iblis);
         View egynclick = findViewById(R.id.Egyn);
         View amaimonclick = findViewById(R.id.Amaimon);
+        View nextClick = findViewById(R.id.Next);
 
         Satan.setHearts(Satan.getHearts() - WuKong.getStrength());
         if(Satan.getHearts() <= 0){
@@ -255,6 +291,9 @@ public class GameActivity extends AppCompatActivity {
             egynclick.setVisibility(View.VISIBLE);
             amaimonclick.setVisibility(View.VISIBLE);
             textObjectView.setText("Score: " + score);
+            if (score >= 1000) {
+                nextClick.setVisibility(View.VISIBLE);
+            }
             }
 
 
@@ -262,5 +301,16 @@ public class GameActivity extends AppCompatActivity {
         punch_sound.start();
     }
 
+    public void nextClick(View v){
+        View nextClick = findViewById(R.id.Next);
+        WuKong.setStrength(WuKong.getStrength() + 1);
+        score = 0;
+
+        nextClick.setVisibility(View.GONE);
+        Toast.makeText(this, "YOU GOT STRONGER",
+                Toast.LENGTH_SHORT).show();
+        Log.i("info","The user clicked the help button.");
+        Intent i;
+    }
 
 }
